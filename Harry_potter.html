@@ -1,0 +1,210 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <TITLE> Harry Potter </TITLE>
+    <link rel="stylesheet" type="text/css" href="css/harry.css">
+ 
+    <!-- audio -->
+    <audio id="audio" src="res/BGM.mp3" autoplay loop></audio>
+</HEAD>
+<body>
+    <div>
+        <div id="slidebox">
+            <ul id="slider">
+                <li>
+                    <img src="res/1.jpg" alt="image1.jpg" >
+                </li>
+                <li>
+                    <img src="res/2.jpg" alt="image2.jpg" >
+                </li>
+                <li>
+                    <img src="res/3.jpg" alt="image3.jpg">
+                </li>
+                <li>
+                    <img src="res/4.jpg" alt="image4.jpg" >
+                </li>
+                <li>
+                    <img src="res/5.jpg" alt="image5.jpg" background-attachment:scroll; />
+                </li>
+            </ul>
+        </div>
+
+        <!-- aside indecator, changing background (maybe) -->
+        <div style="width: 100%; height:auto; position:fixed; top:50%;">
+            <img src="res/go_back.png" width="60" height="70" style="position:fixed; left:10px;" onclick="startSlide('prev')" 
+            onmouseover="this.src='res/go_back_hover.png'" onmouseout="this.src='res/go_back.png'"/>
+            <img src="res/go_next.png" width="60" height="70" style="position:fixed; right:10px;" onclick="startSlide('next')" 
+            onmouseover="this.src='res/go_next_hover.png'" onmouseout="this.src='res/go_next.png'"/>
+        </div>
+        <!-- This part is Head Section  -->
+        <div style="width: 100%; text-align:center; position:fixed; top:1%;">
+            <a href="Harry_potter.html"><img src="http://jinnecom.dothome.co.kr/20165/harrypotter/harrylogo.png" style="width: 100%; max-width: 300px; vertical-align: middle" /></a>
+            <a href="team_profile.html"><img src='res/Phoenix.png' width=180 height=85 style="position: absolute; left:10px; top:10px;"></a>
+            <a href="http://www.seoultech.ac.kr"><input type='image' src='res/seoultech.png' width=100 height=100 style="position: absolute; right:1px;"></a>
+        </div>
+
+            <div class="container" style="width:100%; text-align:center; position:fixed;top:15%; display:inline-block;">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">EXPLORE THE STORY</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#" onclick="FB_popup_func('s1'); return false;">The Philosopher's Stone</a></li>
+                            <li><a href="#" onclick="FB_popup_func('s2'); return false;">The Chamber of Secrets</a></li>
+                            <li><a href="#" onclick="FB_popup_func('s3'); return false;">The Prisoner of Azkaban</a></li>
+                            <li><a href="#" onclick="FB_popup_func('s4'); return false;">The Goblet of Fire</a></li>
+                            <li><a href="#" onclick="FB_popup_func('s5'); return false;">The Order of the Phoenix</a></li>
+                            <li><a href="#" onclick="FB_popup_func('s6'); return false;">The Half-Blood Prince</a></li>
+                            <li><a href="#" onclick="FB_popup_func('s7'); return false;">The Deathly Hallows</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                            <a href="#" data-toggle="dropdown">FANTASTIC BEAST</a>
+                            <ul class="dropdown-menu" style="text-align:center;">
+                                <li><a href="#" onclick="FB_popup_func('fb_intro'); return false;">Introduction</a></li>
+                                <li><a href="#" onclick="FB_trailer_func('fb_trailer'); return false;">Trailer</a></li>
+                                <li><a href="https://www.fantasticbeasts.com/">Official Page</a></li>
+                            </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">ATTRACTION</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#" onclick="FB_popup_func('AT_usjp'); return false;">Universial Studio in JAPAN</a></li>
+                            <li><a href="#" onclick="FB_popup_func('AT_wsuk'); return false;">Warner Bros. in UK</a></li>
+                            <li><a href="#" onclick="FB_popup_func('AT_hpcc'); return false;">Harry Potter and The Cursed Child</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">MAGIC SPELL</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#" onclick="FB_popup_func('Offensive'); return false;">Offensive Magic</a></li>
+                            <li><a href="#" onclick="FB_popup_func('Defensive'); return false;">Defensive Magic</a></li>
+                            <li><a href="#" onclick="FB_popup_func('Unforgivable'); return false;">Unforgivable Magic</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown">THE WIZARDING WORLD</a>
+                        <ul class="dropdown-menu" style="text-align:center;">
+                            <li><a href="#" onclick="FB_popup_func('Horgwarts'); return false;">Horgwarts School</a></li>
+                            <li><a href="http://www.gloucestercathedral.org.uk/">Gloucester Cathedral</a></li>
+                            <li><a href="https://www.kingscross.co.uk/harry-potters-platform-9-34">King's Cross Station</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <!-- popup display -->
+
+    <!--Explore The Story -->
+    <div id="s1" class="fbox">
+        <div>
+            <iframe src="s1.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s1'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="s2" class="fbox">
+        <div>
+            <iframe src="s2.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s2'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="s3" class="fbox">
+        <div>
+            <iframe src="s3.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s3'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="s4" class="fbox">
+        <div>
+            <iframe src="s4.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s4'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="s5" class="fbox">
+        <div>
+            <iframe src="s5.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s5'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="s6" class="fbox">
+        <div>
+            <iframe src="s6.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s6'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="s7" class="fbox">
+        <div>
+            <iframe src="s7.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('s7'); return false;"><b>X</b></button>
+        </div>
+    </div>
+
+    <!-- Fantastic beast -->
+    <div id="fb_intro" class="fbox">
+        <div>
+            <iframe src="FB_intro.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('fb_intro'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id='fb_trailer' class="fbox">
+        <div id="video_div" style="background-color:rgba(0,0,0,0);width:950px;height:650px;display:inline-block;">
+            <iframe onclick="audio_play();" style="width:1000;height:550;" src="https://www.youtube.com/embed/4f3wL6cgFZ8?rel=0&amp;controls=0&amp;showinfo=0&amp;start=14&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <button onclick="FB_trailer_func('fb_trailer'); return false;" style="position:relative;bottom:545px;left:510px;font-size:16px;background-color:rgba(0,0,0,0);color:white;border:0;"><b>X</b></button>
+         </div>
+    </div>
+
+    <!-- Attraction -->
+    <div id="AT_usjp" class="fbox">
+        <div>
+            <iframe src="AT_usjp.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('AT_usjp'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="AT_wsuk" class="fbox">
+        <div>
+            <iframe src="AT_wsuk.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('AT_wsuk'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="AT_hpcc" class="fbox">
+        <div>
+            <iframe src="AT_hpcc.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('AT_hpcc'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    
+    <!-- Magic Spell -->
+    <div id="Offensive" class="fbox">
+        <div>
+            <iframe src="Offensive.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('Offensive'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="Defensive" class="fbox">
+        <div>
+            <iframe src="Defensive.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('Defensive'); return false;"><b>X</b></button>
+        </div>
+    </div>
+    <div id="Unforgivable" class="fbox">
+        <div>
+            <iframe src="Unforgivable.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('Unforgivable'); return false;"><b>X</b></button>
+        </div>
+    </div>
+
+    <!-- The Wizarding World-->
+    <div id="Horgwarts" class="fbox">
+        <div>
+            <iframe src="Horgwarts.html" frameborder="0" scrolling="yes"></iframe>
+            <button onclick="FB_popup_func('Horgwarts'); return false;"><b>X</b></button>
+        </div>
+    </div>
+
+    <!-- audio play btn -->
+    <input type="button" value="BGM play/pause" id="audio_btn" onclick="bgm_btn(); return false;" 
+    style="position:fixed;right:5px;bottom:5px;font-size:30px;border:0;font-family:Brush Script MT;background-color: rgba(102, 102, 102, 0);color:white;">
+    
+    <!-- script -->
+    <script src="js/harry.js"></script>
+</body>
+</HTML>
